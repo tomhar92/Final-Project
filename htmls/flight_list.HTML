@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/4dc6e66b20.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Flightly - Fast and Easy</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row justify-content-center" style="padding-top: 50px;">
+            <div class="col-auto">
+                <img src="https://tom-sapir-final-project.herokuapp.com/images/logo.jpeg" style="width:100%"></img>
+            </div>
+        </div>
+        <div style="background: #09347F; width:100%; height:3px; margin-top:10px;"></div>
+        <div class="row justify-content-center" style="margin-top: 10px;">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <b>Tel Aviv-Chicago</b>
+                            </div>
+                            <div class="col-lg-4">
+                                <b>01/09/2020</b>
+                            </div>
+                            <div class="col-lg-4">
+                                <b>2 People</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 10px; padding: 5px;">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <h2 class="card-text"><b>El Al Airlines</b></h2>
+                            <p class="card-text"><i class="fas fa-plane-departure"></i><b> Departure:</b> 8:40 AM Tel Aviv Airport (TLV)</p>
+                            <p class="card-text"><i class="fas fa-plane-arrival"></i><b> Arrival:</b> 9:15 PM Chicago Airport (CHI)</p>
+                        </div>
+                        <div class="col">
+                                <h3><b>1250$</b></h3> 
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn flight_btn" style="margin-top: 20px; width: 100%; background-color: #09347F; color:white;">Reserve</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 10px; padding: 5px;">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <h2 class="card-text"><b>United Airlines</b></h2>
+                            <p class="card-text"><i class="fas fa-plane-departure"></i><b> Departure:</b> 12:25 PM Tel Aviv Airport (TLV)</p>
+                            <p class="card-text"><i class="fas fa-plane-arrival"></i><b> Arrival:</b> 23:15 PM Chicago Airport (CHI)</p>
+                        </div>
+                        <div class="col">
+                                <h3><b>1280$</b></h3> 
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn flight_btn" style="margin-top: 20px; width: 100%; background-color: #09347F; color:white;">Reserve</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 10px; padding: 5px;">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <h2 class="card-text"><b>Air Canada</b></h2>
+                            <p class="card-text"><i class="fas fa-plane-departure"></i><b> Departure:</b> 04:40 AM Tel Aviv Airport (TLV)</p>
+                            <p class="card-text"><i class="fas fa-plane-arrival"></i><b> Arrival:</b> 14:10 PM Chicago Airport (CHI)</p>
+                        </div>
+                        <div class="col">
+                                <h3><b>1270$</b></h3> 
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn flight_btn" style="margin-top: 20px; width: 100%; background-color: #09347F; color:white;">Reserve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            let user_code = sessionStorage.getItem('user_id');
+                
+                let data_request = {
+                    'user_id': user_code,
+                    'load_flight_list': true
+                }
+                fetch_request(data_request);
+        })    
+        
+        let buttons = document.getElementsByClassName('flight_btn')
+        for(let i=0;i < buttons.length; i++){
+            buttons[i].onclick = function() {
+                let group_of_user = sessionStorage.getItem('group')
+                if (group_of_user == 'Web_No_Interface' ||  group_of_user == 'Mobile_No_Interface'){
+                    location.href = "PWT2-NoFiller-questions"; 
+                }
+                else{
+                    location.href = 'PWT_questions'
+                }
+            }
+        }
+
+        async function fetch_request(data_request){
+            fetch('server/load_flight_list', {
+                method: 'POST'
+                ,  headers: {
+                    'Content-Type': 'application/json'
+                }
+                , body: JSON.stringify(data_request)
+            })
+            .then(async (response) => {
+                console.log("request-sent-properly");
+                return await response.json();
+            })
+            .then((data) => {
+                
+                if(data.name != "error" && data.rowCount == 1){
+                    console.log(data);
+                }
+                else{
+                    console.log(data.routine);
+                    alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+               }
+                
+            })
+            .catch(error => {
+                console.log(error.message);
+                alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+            });
+        }
+        
+   
+    </script>
+</body>
+</html>

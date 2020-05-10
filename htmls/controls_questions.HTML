@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Flightly - Fast and Easy</title>
+    <style>
+    body p{
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    @media screen and (max-width: 1024px) {
+        .pc {
+            display: none !important;
+        }
+    }    
+    @media screen and (min-width: 1024px) {
+        .mobile {
+            display: none !important;
+        }
+    }    
+    </style>
+  </head>
+  <body>
+    <div class="container">  
+        <div class="row justify-content-center" style="padding-top: 50px;">
+            <div class="col-auto">
+                <img src="images/‏‏logo.JPG" style="width:100%"></img>
+            </div>
+        </div>
+       
+        <div style="background: #09347F; width:100%; height:3px; margin-top:10px;"></div>
+        <div class="row justify-content-center" style="margin-top: 20px;margin-left: 2px; margin-right: 2px;">
+            <h2 style="text-align: center;">Please fill the following questionnaire:</h2>
+        </div>
+        <div class="row justify-content-center" style="margin-left: 2px; margin-right: 2px;">  
+            <h4 style="text-align: center;"><b>General and Demographic Questions:</b></h4>
+        </div>
+        
+        <div class="row justify-content-center" style="margin-top: 20px">
+            <div class="col-lg-6">
+                <form>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-6 pt-0"><b>Gender</b></legend>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input gender_check" type="checkbox" id="inlineCheckbox1" value="Male">
+                                <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input gender_check" type="checkbox" id="inlineCheckbox2" value="Female">
+                                <label class="form-check-label" for="inlineCheckbox2">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input gender_check" type="checkbox" id="inlineCheckbox3" value="Other">
+                                <label class="form-check-label" for="inlineCheckbox2">Other</label>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <div id="gender_validation" style="color: red;"></div>
+                    </div>    
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-6 pt-0"><b>Age</b></legend>
+                        <div class="col">
+                            <select class="form-control" id="age_group">
+                                <option>Please select your answer</option>
+                                <option>Under 18</option>
+                                <option>18-25</option>
+                                <option>25-30</option>
+                                <option>30-35</option>
+                                <option>35-40</option>
+                                <option>Above 40</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div id="age_validation" style="color: red;"></div>
+                    </div> 
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-6 pt-0"><b>What is your level of education?</b></legend>
+                        <div class="col">
+                            <select class="form-control" id="education_level">
+                                <option>Please select your answer</option>
+                                <option>Grade School</option>
+                                <option>High School</option>
+                                <option>Technical</option>
+                                <option>Bachelors Degree</option>
+                                <option>Masters Degree</option>
+                                <option>Doctoral Degree</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div id="education_level_validation" style="color: red;"></div>
+                    </div> 
+                    <div class="form-group row pc">
+                        <legend class="col-form-label col-lg-6 pt-0"><b>How many hours a day do you use the PC (for non work purposes)?</b></legend>
+                        <div class="col">
+                            <select class="form-control" id="pc_hours">
+                                <option>Please select your answer</option>
+                                <option>0-1</option>
+                                <option>1-3</option>
+                                <option>3-6</option>
+                                <option>7+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div id="pc_hours_validation" style="color: red;"></div>
+                    </div> 
+                    <div class="form-group row mobile">
+                        <legend class="col-form-label col-lg-6 pt-0"><b>How many hours a day do you use your Mobile (for non work purposes)?</b></legend>
+                        <div class="col">
+                            <select class="form-control" id="mobile_hours">
+                                <option>Please select your answer</option>
+                                <option>0-1</option>
+                                <option>1-3</option>
+                                <option>3-6</option>
+                                <option>7+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div id="mobile_hours_validation" style="color: red;"></div>
+                    </div> 
+                    <div class="form-group row pc">
+                        <legend class="col-form-label col-lg-6 pt-0"><b>How many flights did you order using PC?</b></legend>
+                        <div class="col">
+                            <select class="form-control" id="pc_flights">
+                                <option>Please select your answer</option>
+                                <option>0</option>
+                                <option>1-3</option>
+                                <option>3-5</option>
+                                <option>5-10</option>
+                                <option>10+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div id="pc_flights_validation" style="color: red;"></div>
+                    </div> 
+                    <div class="form-group row mobile">
+                        <legend class="col-form-label col-lg-6 pt-0"><b>How many flights did you order using Mobile?</b></legend>
+                        <div class="col">
+                            <select class="form-control" id="mobile_flights">
+                                <option>Please select your answer</option>
+                                <option>0</option>
+                                <option>1-3</option>
+                                <option>3-5</option>
+                                <option>5-10</option>
+                                <option>10+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div id="mobile_flights_validation" style="color: red;"></div>
+                    </div> 
+                    <div class="form-group row pc">
+                        <legend class="col-form-label col-lg-6 pt-0"><b>Which type of computer are you using?</b></legend>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input pc_device_check" type="checkbox" id="inlineCheckbox1" value="Laptop">
+                                <label class="form-check-label" for="inlineCheckbox1">Laptop</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input pc_device_check" type="checkbox" id="inlineCheckbox1" value="PC">
+                                <label class="form-check-label" for="inlineCheckbox1">PC</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row mobile">
+                        <legend class="col-form-label col-lg-6 pt-0"><b>Which type of mobile are you using?</b></legend>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input mobile_device_check" type="checkbox" id="inlineCheckbox1" value="ios">
+                                <label class="form-check-label" for="inlineCheckbox1">iOS</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input mobile_device_check" type="checkbox" id="inlineCheckbox1" value="android">
+                                <label class="form-check-label" for="inlineCheckbox1">Android</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div id="device_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row justify-content-center">
+                        <div class="col-lg-5">
+                            <button type="button" class="btn_submit_button" id="submit_button" style="width: 100%; background-color: #09347F; color:white;">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('.gender_check').click(function() {
+                $('.gender_check').not(this).prop('checked', false);
+            });
+            $('.mobile_device_check').click(function() {
+                $('.mobile_device_check').not(this).prop('checked', false);
+            });
+            $('.pc_device_check').click(function() {
+                $('.pc_device_check').not(this).prop('checked', false);
+            });
+                
+        });
+
+        let device = null;
+
+        function get_device(){
+                if (window.innerWidth < 1024){
+                    device = "mobile";
+                }
+                else{
+                    device = "pc";
+                }
+            }
+
+        window.addEventListener("resize", get_device);
+        window.onload = get_device;
+   
+        async function fetch_request(data_request){
+            fetch('server/controls_question', {
+                method: 'POST'
+                ,  headers: {
+                    'Content-Type': 'application/json'
+                }
+                , body: JSON.stringify(data_request)
+            })
+            .then(async (response) => {
+                console.log("request-sent-properly");
+                return await response.json();
+            })
+            .then((data) => {
+                
+                if(data.name != "error" && data.rowCount == 1){
+                    console.log(data);
+                    location.href = "Space_questions";
+                    
+                }
+                else{
+                    console.log(data.routine);
+                    alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+               }
+                
+            })
+            .catch(error => {
+                console.log(error.message);
+                alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+            });
+        }
+
+        document.getElementById('submit_button').onclick = function() {
+            let data_request = {}
+            let is_valid = [false,false];
+            data_request['user_id'] = sessionStorage.getItem('user_id');
+        
+            let gender_options = document.getElementsByClassName('gender_check')
+            for (var i=0;i<gender_options.length; i++){
+                if(gender_options[i].checked){
+                    data_request['gender'] = gender_options[i].value;
+                    is_valid[0]=true;
+                    break;
+                }
+            }
+
+            let age_group = document.getElementById("age_group");
+            data_request['age_group'] = age_group.options[age_group.selectedIndex].value;
+            if (age_group.value == "Please select your answer"){
+                document.getElementById('age_validation').innerHTML = "Please select your age";
+            }
+            else{
+                document.getElementById('age_validation').innerHTML = ""; 
+            }
+
+            let education_level = document.getElementById("education_level");
+            data_request['education_level'] = education_level.options[education_level.selectedIndex].value;
+            if (education_level.value == "Please select your answer"){
+                document.getElementById('education_level_validation').innerHTML = "Please select your level of education";
+            }
+            else{
+                document.getElementById('education_level_validation').innerHTML = ""; 
+            }
+
+            if (device == 'mobile'){
+                let mobile_hours = document.getElementById("mobile_hours");
+                data_request['device_hours'] = mobile_hours.options[mobile_hours.selectedIndex].value;
+                    if (mobile_hours.value == "Please select your answer"){
+                        document.getElementById('mobile_hours_validation').innerHTML = "Please make your selection";
+                    }
+                    else{
+                        document.getElementById('mobile_hours_validation').innerHTML = ""; 
+                    }
+
+                let mobile_flights = document.getElementById("mobile_flights");
+                data_request['device_flights'] = mobile_flights.options[mobile_flights.selectedIndex].value;
+                if (mobile_flights.value == "Please select your answer"){
+                        document.getElementById('mobile_flights_validation').innerHTML = "Please choose how many flights you ordered";
+                }
+                else{
+                        document.getElementById('mobile_flights_validation').innerHTML = ""; 
+                }
+            
+                let device_options = document.getElementsByClassName('mobile_device_check')
+                for (var i=0;i<device_options.length; i++){
+                    if(device_options[i].checked){
+                        data_request['device_type'] = device_options[i].value;
+                        is_valid[1] = true;
+                        break;
+                    }
+                }
+            }    
+
+            if (device == 'pc'){
+            
+                let pc_hours = document.getElementById("pc_hours");
+                data_request['device_hours'] = pc_hours.options[pc_hours.selectedIndex].value;
+                if (pc_hours.value == "Please select your answer"){
+                        document.getElementById('pc_hours_validation').innerHTML = "Please make your selection";
+                }
+                else{
+                        document.getElementById('pc_hours_validation').innerHTML = ""; 
+                }
+            
+                let pc_flights = document.getElementById("pc_flights");
+                data_request['device_flights'] = pc_flights.options[pc_flights.selectedIndex].value; 
+                if (pc_flights.value == "Please select your answer"){
+                        document.getElementById('pc_flights_validation').innerHTML = "Please choose how many flights you ordered";
+                }
+                else{
+                        document.getElementById('pc_flights_validation').innerHTML = ""; 
+                }
+
+
+                let device_options = document.getElementsByClassName('pc_device_check')
+                for (var i=0;i<device_options.length; i++){
+                    if(device_options[i].checked){
+                        data_request['device_type'] = device_options[i].value;
+                        is_valid[1] = true;
+                        break;
+                    }
+                }
+            }
+            
+            if(is_valid[0] == false){
+                document.getElementById('gender_validation').innerHTML = "Please select your gender";
+                if(is_valid[1] == false){
+                    document.getElementById('device_validation').innerHTML = "Please select your device type"; 
+                }
+                else{
+                    document.getElementById('device_validation').innerHTML = ""; 
+                }
+            }
+            else if(is_valid[1] == false){
+                document.getElementById('device_validation').innerHTML = "Please select your device type";
+            }
+
+            else{
+                document.getElementById('gender_validation').innerHTML = ""; 
+                document.getElementById('device_validation').innerHTML = "";
+                console.log(data_request);
+                fetch_request(data_request);
+            }
+
+        }
+    </script>
+ </body>
+</html>

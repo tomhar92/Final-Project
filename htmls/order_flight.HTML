@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <title>Flightly - Fast and Easy</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row justify-content-center" style="padding-top: 50px;">
+            <div class="col-auto">
+              <img src="https://tom-sapir-final-project.herokuapp.com/images/logo.jpeg" style="width:100%"></img>
+            </div>
+        </div>
+        <div style="background: #09347F; width:100%; height:3px; margin-top:10px;"></div>
+        <div class="row justify-content-center" style="padding-top: 30px;">
+            <div class="col-lg-8">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-lg-5" style="margin-left: 2%; margin-right: 2%;">
+                            <div class="form-group row">
+                                <label for="exampleFormControlSelect1" style="font-family: 'Noto Sans JP', sans-serif;">Fly from...</label>
+                                <select class="form-control" id="choose_from">
+                                    <option>Tel Aviv</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-5" style="margin-left: 2%; margin-right: 2%;">    
+                            <div class="form-group row">
+                                <label for="exampleFormControlSelect1" style="font-family: 'Noto Sans JP', sans-serif;">To</label>
+                                <select class="form-control" id="choose_to">
+                                    <option>Chicago</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-5" style="margin-left: 2%; margin-right: 2%;">  
+                            <div class="form-group row">
+                                <label class="control-label" for="date" style="font-family: 'Noto Sans JP', sans-serif;">In</label>
+                                <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>  
+                                <p id="date_validation" style="color:red"></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5" style="margin-left: 2%; margin-right: 2%;">   
+                            <div class="form-group row">
+                                <label for="formControlRange" style="font-family: 'Noto Sans JP', sans-serif;">How many People?</label>
+                                <select class="form-control" id="choose_to">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row justify-content-center">
+                        <div class="col-lg-5">
+                            <button type="button" id="submit_button" class="btn" style="margin-top: 20px; width: 100%; background-color: #09347F; color:white;">Look for flights</button>
+                        </div>
+                    </div>            
+                </form>
+            </div>    
+        </div>
+    </div>    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script>
+
+        let device = "";
+        function get_device(){
+            if (window.innerWidth < 1024){
+                device = "mobile";
+            }
+            else{
+                device = "pc";
+            }
+        }
+
+        window.addEventListener("resize", get_device);
+        window.onload = get_device;
+
+        $(document).ready(function(){
+            var date_input=$('input[name="date"]'); //our date input has the name "date"
+            var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+            var options={
+                format: 'dd/mm/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            }    
+            date_input.datepicker(options);
+            let group_of_user = sessionStorage.getItem('group')
+            let user_id = sessionStorage.getItem('user_id')
+            console.log(group_of_user)
+            console.log(user_id)
+        })
+
+        document.getElementById("submit_button").onclick = function(){
+            if(document.getElementById("date").value != '01/09/2020'){
+                document.getElementById('date_validation').innerHTML = 'You can only select the 01/09/2020 as your flight date!';
+            }
+            else{
+                let user_code = sessionStorage.getItem('user_id');
+                
+                let data_request = {
+                    'user_id': user_code,
+                    'experiment_device': device
+                }
+                fetch_request(data_request);
+            }
+        }
+
+        async function fetch_request(data_request){
+            fetch('server/search_flight', {
+                method: 'POST'
+                ,  headers: {
+                    'Content-Type': 'application/json'
+                }
+                , body: JSON.stringify(data_request)
+            })
+            .then(async (response) => {
+                console.log("request-sent-properly");
+                return await response.json();
+            })
+            .then((data) => {
+                
+                if(data.name != "error" && data.rowCount == 1){
+                    console.log(data);
+                    navigate();
+                    
+                }
+                else{
+                    console.log(data.routine);
+                    alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+               }
+                
+            })
+            .catch(error => {
+                console.log(error.message);
+                alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+            });
+        }
+    
+    function navigate () {
+        let group_of_user = sessionStorage.getItem('group');
+        if (group_of_user == 'Web_No_Interface' ||  group_of_user == 'Mobile_No_Interface'){
+                    setTimeout(function(){ location.href = "flight_list"; }, 16000)
+                }
+                else if (group_of_user == 'Mobile_Non_Inter_Non_Rel' || group_of_user == 'Web_Non_Inter_Non_Rel'){
+                    location.href = "Waitng_NonInter_and_NonRev";
+                }
+                else if (group_of_user == 'Mobile_Non_Inter_Yes_Rel' || group_of_user == 'Web_Non_Inter_Yes_Rel'){
+                    location.href = "Waitng_NonInter_and_Rev";
+                }
+                else if (group_of_user == 'Mobile_Yes_Inter_Non_Rel' || group_of_user == 'Web_Yes_Inter_Non_Rel'){
+                    location.href = "Waiting_Inter_and_NonRev";
+                }
+                else{
+                    location.href = "Waiting_Inter_and_Rev";
+                }
+    }
+    </script>
+</body>
+</html>

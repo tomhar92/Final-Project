@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Flightly - Fast and Easy</title>
+    <style>
+    body p{
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    @media screen and (max-width: 1024px) {
+        .pc {
+            display: none !important;
+        }
+    }    
+    @media screen and (min-width: 1024px) {
+        .mobile {
+            display: none !important;
+        }
+    }    
+    </style>
+  </head>
+  <body>
+    <div class="container">  
+        <div class="row justify-content-center" style="padding-top: 50px;">
+            <div class="col-auto">
+                <img src="https://tom-sapir-final-project.herokuapp.com/images/logo.jpeg" style="width:100%"></img>
+            </div>
+        </div>
+        <div style="background: #09347F; width:100%; height:3px; margin-top:10px;"></div>
+        <div class="row justify-content-center" style="margin-top: 20px;margin-left: 2px; margin-right: 2px;">
+            <div class="col-lg-13">
+            <h1 style="text-align: center;">Please fill the following questionnaire</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="margin-left: 2px; margin-right: 2px;"> 
+            <div class="col-lg-9">
+                <h4 style="text-align: center;color: #09347F;"><b>1 = Strongly Disagree to</b></h4>
+                <h4 style="text-align: center;color: #09347F;"><b>7 = Strongly Agree</b></h4>
+            </div> 
+        </div>
+        <div class="row justify-content-center" style="margin-top: 20px">
+            <div class="col-lg-8">
+                <form>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>1. I was intensely absorbed in the filler interface while waiting to see the results.</b></legend>
+                        <div class="col-lg-8 col-xs-12">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI1_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI1_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI1_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI1_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI1_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI1_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI1_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="FI1_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>2. My attention was focused on the filler interface while I was waiting to see the results.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI2_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI2_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI2_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI2_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI2_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI2_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI2_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="FI2_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>3. I concentrated fully on the filler interface while waiting to see the results.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI3_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI3_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI3_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI3_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI3_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI3_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI3_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="FI3_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>4. I was deeply immersed in the filler interface while waiting to see the results.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI4_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI4_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI4_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI4_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI4_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI4_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input FI4_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="FI4_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>5. Time appeared to go by very quickly while waiting to see the results.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD1_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD1_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD1_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD1_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD1_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD1_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD1_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="TD1_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>6. I lost track of time while waiting to see the results.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD2_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD2_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD2_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD2_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD2_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD2_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD2_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="TD2_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>7. I was unconscious of the passage of time while waiting to see the results.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD3_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD3_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD3_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD3_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD3_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD3_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD3_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="TD3_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>8. Time seemed to fly while I was waiting to see the results.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD4_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD4_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD4_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD4_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD4_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD4_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD4_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="TD4_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>9. While waiting to see the results, I forgot the passage of time.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD5_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD5_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD5_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD5_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD5_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD5_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input TD5_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="TD5_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>10. Waiting for the requested results in the filler interface was Pleasant.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE1_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE1_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE1_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE1_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE1_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE1_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE1_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="HE1_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>11. Waiting for the requested results in the filler interface was Enjoyable.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE2_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE2_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE2_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE2_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE2_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE2_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE2_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="HE2_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>12. Waiting for the requested results in the filler interface was Fun.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE3_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE3_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE3_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE3_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE3_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE3_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE3_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="HE3_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>13. Waiting for the requested results in the filler interface was Exciting.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE4_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE4_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE4_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE4_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE4_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE4_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input HE4_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="HE4_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>14. Your online wait to see the requested results was Fast.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT1_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT1_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT1_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT1_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT1_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT1_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT1_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="PWT1_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>15. Your online wait to see the requested results was Speedy.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT2_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT2_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT2_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT2_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT2_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT2_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT2_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="PWT2_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>16. Your online wait to see the requested results was Quick.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT3_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT3_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT3_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT3_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT3_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT3_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input PWT3_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="PWT3_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>17. My overall experience with the Web site was Happy.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA1_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA1_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA1_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA1_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA1_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA1_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA1_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="AA1_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>18. My overall experience with the Web site was Good.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA2_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA2_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA2_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA2_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA2_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA2_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA2_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="AA2_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>19. My overall experience with the Web site was Relaxed.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA3_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA3_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA3_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA3_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA3_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA3_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA3_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="AA3_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>20. My overall experience with the Web site was Likable.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA4_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA4_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA4_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA4_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA4_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA4_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA4_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="AA4_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>21. My overall experience with the Web site was Satisfactory.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA5_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA5_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA5_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA5_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA5_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA5_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input AA5_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="AA5_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>22. The Web site was effective for achieving the goal of my visit.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA1_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA1_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA1_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA1_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA1_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA1_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA1_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="CA1_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>23. The Web site was convenient for attaining the goal of my visit.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA2_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA2_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA2_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA2_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA2_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA2_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA2_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="CA2_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>24. I felt comfortable using the Web site to achieve the goal of my visit.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA3_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA3_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA3_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA3_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA3_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA3_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA3_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="CA3_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>25. The Web site was helpful for achieving the goal of my visit.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA4_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA4_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA4_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA4_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA4_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA4_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input CA4_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="CA4_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>26. If I needed this service in the future, I would probably revisit this Web site.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI1_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI1_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI1_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI1_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI1_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI1_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI1_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="UI1_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>27. I would recommend this Web site to others who are interested in this service.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI2_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI2_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI2_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI2_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI2_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI2_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI2_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="UI2_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-lg-10 pt-0"><b>28. If I needed this service in the future, I would probably try this Web site again.</b></legend>
+                        <div class="col-lg-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI3_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI3_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI3_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI3_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI3_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI3_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input UI3_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                            </div>
+                        </div>
+                        <div id="UI3_validation" style="color: red;"></div>
+                    </div>
+                    <div class="form-group row justify-content-center">
+                        <div class="col-lg-5">
+                            <button type="button" id="PWT_questions_btn" style="width: 100%; background-color: #09347F; color:white;">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        
+
+        
+
+        $(function () {
+            $('.FI1_check').click(function() {
+                $('.FI1_check').not(this).prop('checked', false);
+            });
+            $('.FI2_check').click(function() {
+                $('.FI2_check').not(this).prop('checked', false);
+            });
+            $('.FI3_check').click(function() {
+                $('.FI3_check').not(this).prop('checked', false);
+            });
+            $('.FI4_check').click(function() {
+                $('.FI4_check').not(this).prop('checked', false);
+            });
+            $('.TD1_check').click(function() {
+                $('.TD1_check').not(this).prop('checked', false);
+            });
+            $('.TD2_check').click(function() {
+                $('.TD2_check').not(this).prop('checked', false);
+            });
+            $('.TD3_check').click(function() {
+                $('.TD3_check').not(this).prop('checked', false);
+            });
+            $('.TD4_check').click(function() {
+                $('.TD4_check').not(this).prop('checked', false);
+            });
+            $('.TD5_check').click(function() {
+                $('.TD5_check').not(this).prop('checked', false);
+            });
+            $('.HE1_check').click(function() {
+                $('.HE1_check').not(this).prop('checked', false);
+            });
+            $('.HE2_check').click(function() {
+                $('.HE2_check').not(this).prop('checked', false);
+            });
+            $('.HE3_check').click(function() {
+                $('.HE3_check').not(this).prop('checked', false);
+            });
+            $('.HE4_check').click(function() {
+                $('.HE4_check').not(this).prop('checked', false);
+            });
+            $('.PWT1_check').click(function() {
+                $('.PWT1_check').not(this).prop('checked', false);
+            });
+            $('.PWT2_check').click(function() {
+                $('.PWT2_check').not(this).prop('checked', false);
+            });
+            $('.PWT3_check').click(function() {
+                $('.PWT3_check').not(this).prop('checked', false);
+            });
+            $('.AA1_check').click(function() {
+                $('.AA1_check').not(this).prop('checked', false);
+            });
+            $('.AA2_check').click(function() {
+                $('.AA2_check').not(this).prop('checked', false);
+            });
+            $('.AA3_check').click(function() {
+                $('.AA3_check').not(this).prop('checked', false);
+            });
+            $('.AA4_check').click(function() {
+                $('.AA4_check').not(this).prop('checked', false);
+            });
+            $('.AA5_check').click(function() {
+                $('.AA5_check').not(this).prop('checked', false);
+            });
+            $('.CA1_check').click(function() {
+                $('.CA1_check').not(this).prop('checked', false);
+            });
+            $('.CA2_check').click(function() {
+                $('.CA2_check').not(this).prop('checked', false);
+            });
+            $('.CA3_check').click(function() {
+                $('.CA3_check').not(this).prop('checked', false);
+            });
+            $('.CA4_check').click(function() {
+                $('.CA4_check').not(this).prop('checked', false);
+            });
+            $('.UI1_check').click(function() {
+                $('.UI1_check').not(this).prop('checked', false);
+            });
+            $('.UI2_check').click(function() {
+                $('.UI2_check').not(this).prop('checked', false);
+            });
+            $('.UI3_check').click(function() {
+                $('.UI3_check').not(this).prop('checked', false);
+            });
+             
+        });
+
+        function get_specific_answer(class_name){
+            var answer = null;
+            var buttons = document.getElementsByClassName(class_name);
+            for (var i = 0; i < buttons.length; i++){
+                if(buttons[i].checked && answer == null){
+                    answer = parseInt(buttons[i].value);
+                }
+                else if(buttons[i].checked && answer != null){
+                    throw "Please select only one value"
+                }
+            }
+            if (answer == null){
+                throw "Please answer this question"
+            }
+            return answer;
+        }
+
+        async function fetch_request(data_request){
+            fetch('server/pwt_question', {
+                method: 'POST'
+                ,  headers: {
+                    'Content-Type': 'application/json'
+                }
+                , body: JSON.stringify(data_request)
+            })
+            .then(async (response) => {
+                console.log("request-sent-properly");
+                return await response.json();
+            })
+            .then((data) => {
+                
+                if(data.name != "error" && data.rowCount == 1){
+                    console.log(data);
+                    location.href = "controls_questions";
+                    
+                }
+                else{
+                    console.log(data.routine);
+                    alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+               }
+                
+            })
+            .catch(error => {
+                console.log(error.message);
+                alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+            });
+        }
+
+
+        document.getElementById('PWT_questions_btn').onclick = function() {
+            var class_names = ['FI1_check','FI2_check','FI3_check','FI4_check','TD1_check','TD2_check','TD3_check','TD4_check',
+            'TD5_check','HE1_check','HE2_check','HE3_check','HE4_check','PWT1_check','PWT2_check','PWT3_check','AA1_check','AA2_check',
+            'AA3_check','AA4_check','AA5_check','CA1_check','CA2_check','CA3_check','CA4_check','UI1_check','UI2_check','UI3_check'];
+            var data_request = {};
+            let valid = true;
+            data_request['user_id'] = sessionStorage.getItem('user_id');
+           for (var i = 0; i < class_names.length; i++){
+               let question_name = class_names[i].split("_")[0];
+               let validation_id = question_name + "_validation";
+                try {
+                    data_request[question_name] = get_specific_answer(class_names[i]);
+                    document.getElementById(validation_id).innerHTML = "";
+                }
+                catch(err){
+                    let validation_id = question_name + "_validation";
+                    document.getElementById(validation_id).innerHTML = err;
+                    valid = false;
+                }
+           }
+           if (valid){
+                console.log(data_request);
+                fetch_request(data_request);
+           }  
+        }
+ 
+    </script>
+ </body>
+</html>
+

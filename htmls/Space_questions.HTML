@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Flightly - Fast and Easy</title>
+    <style>
+    body p{
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    @media screen and (max-width: 1024px) {
+        .pc {
+            display: none !important;
+        }
+    }    
+    @media screen and (min-width: 1024px) {
+        .mobile {
+            display: none !important;
+        }
+    }    
+    </style>
+  </head>
+  <body>
+    <div class="container">  
+        <div class="row justify-content-center" style="padding-top: 50px;">
+            <div class="col-auto">
+                <img src="https://tom-sapir-final-project.herokuapp.com/images/logo.jpeg" style="width:100%"></img>
+            </div>
+        </div>
+       
+        <div style="background: #09347F; width:100%; height:3px; margin-top:10px;"></div>
+        <div class="row justify-content-center" style="margin-top: 20px;margin-left: 2px; margin-right: 2px;">
+            <h2 style="text-align: center;">Please fill the following questionnaire:</h2>
+        </div>
+        
+        <div class="row justify-content-center" style="margin-top: 20px">
+            <div class="col-lg-6">
+                <form>
+                    <div class="row justify-content-center" style="margin-left: 2px; margin-right: 2px;">  
+                        <h4 style="text-align: center;"><b>Questions regarding the environment in which the experiment is being performed</b></h4>
+                    </div>
+
+                    <div class="row justify-content-center" style="margin-left: 2px; margin-right: 2px;">  
+                        <h5 style="text-align: center;">Please rank your answer on a scale from 1 to 7:</h5>
+                    </div>
+
+
+                                <div class="form-group row">
+                                    <legend class="col-form-label col-lg-12 pt-0"><b>While answering this survey were you located in an open or closed space?</b></legend>
+                                    <legend class="col-form-label col-lg-10 pt-0"><B>1</B> - in Doors to <b>7</b> - Outside</legend>
+                                    <div class="col-lg-8 col-xs-12">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input open_close_space_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input open_close_space_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input open_close_space_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input open_close_space_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input open_close_space_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input open_close_space_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input open_close_space_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                                        </div>
+                                    </div>
+                                    <div id="open_close_space_validation" style="color: red;"></div>
+                                </div>
+                                <div class="form-group row">
+                                    <legend class="col-form-label col-lg-12 pt-0"><b>Is the space you answered this survey a private space or public?</b></legend>
+                                    <legend class="col-form-label col-lg-10 pt-0"><B>1</B> - Private Space to <b>7</b> - Public Space</legend>
+                                    <div class="col-lg-8 col-xs-12">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input private_public_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input private_public_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input private_public_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input private_public_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input private_public_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input private_public_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input private_public_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                                        </div>
+                                    </div>
+                                    <div id="private_public_validation" style="color: red;"></div>
+                                </div>
+                                <div class="form-group row">
+                                    <legend class="col-form-label col-lg-12 pt-0"><b>How big is the space in which you answered this survey?</b></legend>
+                                    <legend class="col-form-label col-lg-10 pt-0"><B>1</B> - Very Large Space to <b>7</b> - Very Small Space</legend>
+                                    <div class="col-lg-8 col-xs-12">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input large_small_space_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input large_small_space_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input large_small_space_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input large_small_space_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input large_small_space_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input large_small_space_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input large_small_space_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                                        </div>
+                                    </div>
+                                    <div id="large_small_space_validation" style="color: red;"></div>
+                                </div>
+                                <div class="form-group row">
+                                    <legend class="col-form-label col-lg-12 pt-0"><b>How much noise is in your surrounding?</b></legend>
+                                    <legend class="col-form-label col-lg-10 pt-0"><B>1</B> - Very Noisy to <b>7</b> - Very Quiet</legend>
+                                    <div class="col-lg-8 col-xs-12">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Noisy_Quiet_space_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Noisy_Quiet_space_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Noisy_Quiet_space_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Noisy_Quiet_space_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Noisy_Quiet_space_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Noisy_Quiet_space_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Noisy_Quiet_space_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                                        </div>
+                                    </div>
+                                    <div id="Noisy_Quiet_space_validation" style="color: red;"></div>
+                                </div>
+                                <div class="form-group row">
+                                    <legend class="col-form-label col-lg-12 pt-0"><b>How bright is the space around you?</b></legend>
+                                    <legend class="col-form-label col-lg-10 pt-0"><B>1</B> - Very Dark Space to <b>7</b> - Very Bright Space</legend>
+                                    <div class="col-lg-8 col-xs-12">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Dark_Bright_space_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Dark_Bright_space_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Dark_Bright_space_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Dark_Bright_space_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Dark_Bright_space_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Dark_Bright_space_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input Dark_Bright_space_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                                        </div>
+                                    </div>
+                                    <div id="Dark_Bright_space_validation" style="color: red;"></div>
+                                </div>
+                                <div class="form-group row">
+                                    <legend class="col-form-label col-lg-12 pt-0"><b>How crowded is the space in which you answered this survey?</b></legend>
+                                    <legend class="col-form-label col-lg-10 pt-0"><B>1</B> - Over Crowded Space to <b>7</b> - No One Around You</legend>
+                                    <div class="col-lg-8 col-xs-12">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input crowded_space_check" type="checkbox" id="inlineCheckbox1" value="1" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input crowded_space_check" type="checkbox" id="inlineCheckbox1" value="2" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input crowded_space_check" type="checkbox" id="inlineCheckbox1" value="3" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">3</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input crowded_space_check" type="checkbox" id="inlineCheckbox1" value="4" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">4</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input crowded_space_check" type="checkbox" id="inlineCheckbox1" value="5" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">5</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input crowded_space_check" type="checkbox" id="inlineCheckbox1" value="6" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 4px;">6</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input crowded_space_check" type="checkbox" id="inlineCheckbox1" value="7" style="text-align: center">
+                                            <label class="form-check-label" for="inlineCheckbox1" >7</label>
+                                        </div>
+                                    </div>
+                                    <div id="crowded_space_validation" style="color: red;"></div>
+                                </div>
+
+                    <div class="form-group row justify-content-center">
+                        <div class="col-lg-5">
+                            <button type="button" class="btn_space_questions_button" id="submit_button" style="width: 100%; background-color: #09347F; color:white;">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+
+            $('.open_close_space_check').click(function() {
+                $('.open_close_space_check').not(this).prop('checked', false);
+            });
+            $('.private_public_check').click(function() {
+                $('.private_public_check').not(this).prop('checked', false);
+            });
+            $('.large_small_space_check').click(function() {
+                $('.large_small_space_check').not(this).prop('checked', false);
+            });
+            $('.Noisy_Quiet_space_check').click(function() {
+                $('.Noisy_Quiet_space_check').not(this).prop('checked', false);
+            });
+            $('.Dark_Bright_space_check').click(function() {
+                $('.Dark_Bright_space_check').not(this).prop('checked', false);
+            });
+            $('.crowded_space_check').click(function() {
+                $('.crowded_space_check').not(this).prop('checked', false);
+            });
+            
+            
+        });
+
+
+        function get_specific_answer(class_name){
+            var answer = null;
+            var buttons = document.getElementsByClassName(class_name);
+            for (var i = 0; i < buttons.length; i++){
+                if(buttons[i].checked && answer == null){
+                    answer = parseInt(buttons[i].value);
+                }
+                else if(buttons[i].checked && answer != null){
+                    throw "Please select only one value"
+                }
+            }
+            if (answer == null){
+                throw "Please answer this question"
+            }
+            return answer;
+        }
+
+        async function fetch_request(data_request){
+            fetch('server/space_question', {
+                method: 'POST'
+                ,  headers: {
+                    'Content-Type': 'application/json'
+                }
+                , body: JSON.stringify(data_request)
+            })
+            .then(async (response) => {
+                console.log("request-sent-properly");
+                return await response.json();
+            })
+            .then((data) => {
+                
+                if(data.name != "error" && data.rowCount == 1){
+                    console.log(data);
+                    location.href = "ThankYou";
+                    
+                }
+                else{
+                    console.log(data.routine);
+                    alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+               }
+                
+            })
+            .catch(error => {
+                console.log(error.message);
+                alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+            });
+        }
+
+
+        document.getElementById('submit_button').onclick = function() {
+            var class_names = ['open_close_space_check','private_public_check','large_small_space_check'
+            ,'Noisy_Quiet_space_check','Dark_Bright_space_check','crowded_space_check'];
+            var data_request = {};
+            let valid = true;
+            data_request['user_id'] = sessionStorage.getItem('user_id');
+           for (var i = 0; i < class_names.length; i++){
+               let question_name = class_names[i].split("_check")[0];
+               let validation_id = question_name + "_validation";
+                try {
+                    data_request[question_name] = get_specific_answer(class_names[i]);
+                    document.getElementById(validation_id).innerHTML = "";
+                }
+                catch(err){
+                    let validation_id = question_name + "_validation";
+                    document.getElementById(validation_id).innerHTML = err;
+                    valid = false;
+                }
+           }
+           if (valid){
+                console.log(data_request);
+                fetch_request(data_request);
+           }  
+        } 
+    </script>
+ </body>
+</html>

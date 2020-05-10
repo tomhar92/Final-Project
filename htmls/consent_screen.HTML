@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <title>Flightly - Fast and Easy</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row justify-content-center" style="padding-top: 30px;">
+            <div class="col-sm-10">
+              <h1 style="text-align: center;">Welcome to the Experiment Site</h1>
+              <h5 style="text-align: center;">Agreement to participate in the Experiment</h5>
+              <p style="text-align: justify;">
+                1. You are participating in a research experiment about decision making.
+              </p>
+              <p style="text-align: justify;">
+                2. In the following experiment you will be required to book a flight from <b>Tel Aviv to Chicago on September 1st 2020</b>.
+              </p>
+              <p style="text-align: justify;">
+                3. During the experiment you will be asked several questions which you will be required to answer.
+              </p>
+              <p style="text-align: justify;">
+                4. The research and experiment have been approved by the ethics board of Ben-Gurion University of the Negev.
+            </p>
+            <p style="text-align: justify;">
+                5. Annonimity is gaurenteed as part of the experiment. There will be no way to connect your answers with any personal information.
+            </p>
+            <p style="text-align: justify;">
+                6. Participation in this experiment will last around 20 minutes.
+            </p>
+            <p style="text-align: justify;">
+                7. You may exit the experiment at any point. Individuals who do not complete the ex periment will not recieve their full payment for participation.
+            </p>
+            <p style="text-align: justify;">
+                8. For any issues regarding the experiment please contact via email: <b>sapirsc@post.bgu.ac.il</b> or <b>tomha@post.bgu.ac.il</b>.
+            </p>
+            <p style="text-align: center; font-size: x-large;">
+                I agree to and understand all that is written above, and wish to continue in the experiment.
+            </p>  
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn" id="agree_button" style="margin:10px; background-color: #09347F; color:white;">Agree</button>
+            <button type="button" class="btn btn-danger" id="cancel_button" style="margin:10px;">Cancel</button>
+        </div>
+        
+    </div>    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script>
+        
+            let existing_anon_ids = [];
+            let user_code = 0;
+//            let screen_size = window.matchMedia("(max width: 1024 px)");
+            let device = "";
+
+           $(document).ready(() =>{
+                existing_anon_ids = [];
+                user_code = Math.floor(100000 + Math.random() * 900000);
+                fetch('server/get_anon_ids', {
+                    method: 'POST'
+                        ,  headers: {
+                            'Content-Type': 'application/json'
+                        }
+                }).then((response) => {
+                    console.log("request-sent-properly");
+                    return response.json();
+                }).then((data) => {
+                    for (index = 0; index < data.rows.length; index++) { 
+                        existing_anon_ids.push(data.rows[index]['user_id']); 
+                    }
+            
+                    while (user_code in existing_anon_ids){
+                        user_code = Math.floor(100000 + Math.random() * 900000);
+                    }
+                }).catch(error => console.log(error.message)); 
+            });    
+
+            function get_device(){
+                if (window.innerWidth < 1024){
+                    device = "mobile";
+                }
+                else{
+                    device = "pc";
+                }
+            }
+
+        window.addEventListener("resize", get_device);
+        window.onload = get_device;
+
+       document.getElementById("cancel_button").onclick = function () {
+            data_request = {
+                'user_id': user_code,
+                'agree_button': false,
+                'filler_group': null,
+                'origin_device': device
+            }
+            fetch_request(data_request);
+            
+        };
+        document.getElementById("agree_button").onclick = function () {
+            var group = '';
+            var platform_divider = Math.random();
+            var group_divider = Math.random();
+            if (platform_divider <= 0.5){
+                if(group_divider <= 0.2){
+                    group = 'Mobile_No_Interface'
+                }
+                else if(group_divider <= 0.4){
+                    group = 'Mobile_Non_Inter_Non_Rel'
+                }
+                else if(group_divider <= 0.6){
+                    group = 'Mobile_Non_Inter_Yes_Rel'
+                }
+                else if(group_divider <= 0.8){
+                    group = 'Mobile_Yes_Inter_Non_Rel'
+                }
+                else{
+                    group = 'Mobile_Yes_Inter_Yes_Rel'
+                }
+                
+                
+            }
+            else {
+                
+                if(group_divider <= 0.2){
+                    group = 'Web_No_Interface'
+                }
+                else if(group_divider <= 0.4){
+                    group = 'Web_Non_Inter_Non_Rel'
+                }
+                else if(group_divider <= 0.6){
+                    group = 'Web_Non_Inter_Yes_Rel'
+                }
+                else if(group_divider <= 0.8){
+                    group = 'Web_Yes_Inter_Non_Rel'
+                }
+                else{
+                    group = 'Web_Yes_Inter_Yes_Rel'
+                }
+               
+            }
+            console.log(group)
+            sessionStorage.setItem('user_id', user_code);
+            sessionStorage.setItem('group',group);
+
+            data_request = {
+                'user_id': user_code,
+                'agree_button': true,
+                'filler_group': group,
+                'origin_device': device
+            }
+            //console.log(data_request)
+            fetch_request(data_request);
+            
+        }
+
+       async function fetch_request(data_request){
+            fetch('server/consent', {
+                method: 'POST'
+                ,  headers: {
+                    'Content-Type': 'application/json'
+                }
+                , body: JSON.stringify(data_request)
+            })
+            .then(async (response) => {
+                console.log("request-sent-properly");
+                return await response.json();
+            })
+            .then((data) => {
+                console.log(data);
+                if(data.name != "error"){
+                    if (data_request.agree_button == true){
+                        navigate(data_request.filler_group);
+                    }
+                    else{
+                        location.href = "disagree_participation";
+                    }
+                }
+                else{
+                    console.log(data.routine);
+                    alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+                }
+                
+            })
+            .catch(error => {
+                console.log(error.message);
+                alert("\nThere was an error. Please try refresing the page! \n\nIf the error persists please send a print screen to tomha@post.bgu.ac.il or sapirsc@post.bgu.ac.il.");
+            });
+        }
+
+        function navigate(group){
+            if (device == "pc" && group.startsWith("Mobile")){
+                location.href = "switch_to_mobile";
+            }
+            else if(device == "mobile" && group.startsWith("Web")){
+                location.href = "switch_to_pc";
+            }
+            else if(device == "mobile" && group.startsWith("Mobile")) {
+                location.href = "order_flight";
+            }
+            else if (device == "pc" && group.startsWith("Web")){
+                location.href = "order_flight";
+            }
+            
+        }
+    </script>
+</body>
+</html>
